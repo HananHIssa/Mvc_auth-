@@ -1,0 +1,25 @@
+﻿@model Employee
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+</head>
+<body>
+    <h1>Update Your Accounts</h1>
+    <form class="form-control" asp-controller="Enrollments" asp-action="Save" method="post">
+        <div class="my-3">
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" />
+        </div>
+        <input name="Id" value="@Model.Id" type="hidden" />
+        <div class="my-3">
+            <label asp-for="EnrollmentDate">EnrollmentDate</label>
+            <input asp-for="EnrollmentDate" type="date" />
+        </div>
+        <button class="btn-success" type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿
+@model User
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LogIn</title>
+</head>
+<body>
+    <h1>fill your information</h1>
+    <form class="form-control" asp-controller="logIn" asp-action="join" method="post">
+
+        <div class="my-3">
+            <label asp-for="email">Email</label>
+            <input asp-for="email" class="form-control" />
+        </div>
+        <div class="my-3">
+            <label asp-for="password">Password</label>
+            <input asp-for="password" type="password" class="form-control" />
+        </div>
+        
+        <button class="btn btn-success" type="submit">LogIn</button>
+    </form>
+
+</body>
+</html>
